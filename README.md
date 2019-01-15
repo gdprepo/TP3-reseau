@@ -70,6 +70,7 @@ Durée approximative des boucles en millisecondes :
     Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms
 ```
    * ping  VM -> hôte
+   ![](https://github.com/wewlr17/TP3-reseau/blob/master/image%20tp3/vm_hote.PNG)
 -   afficher la table de routage
     -   de l'hôte
     -   de la VM
