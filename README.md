@@ -306,7 +306,13 @@ C:\Users\Gabin\Documents\netcat-1.11>nc64.exe 192.168.127.10 5454
 **Dans un troisième terminal**
 * Visualisation de la connexion  `netcat`  en cours:
  ```
-
+[root@localhost ~]# ss -atnp4
+State      Recv-Q Send-Q               Local Address:Port                              Peer Address:Port
+LISTEN     0      100                      127.0.0.1:25                                           *:*                   users:(("master",pid=3423,fd=13))
+LISTEN     0      128                              *:1025                                         *:*                   users:(("sshd",pid=4445,fd=3))
+ESTAB      0      0                   192.168.127.10:1025                             192.168.127.1:18639               users:(("sshd",pid=4500,fd=3))
+ESTAB      0      0                   192.168.127.10:1025                             192.168.127.1:1318                users:(("sshd",pid=4447,fd=3))
+ESTAB      0      0                   192.168.127.10:5454                             192.168.127.1:18617               users:(("nc",pid=4497,fd=5))
 ```
 
 
