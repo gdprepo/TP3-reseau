@@ -172,21 +172,6 @@ Durée approximative des boucles en millisecondes :
 
     ;; ANSWER SECTION:
     ynov.com.               9527    IN      A       217.70.184.38
-
-    ;; AUTHORITY SECTION:
-    com.                    58927   IN      NS      g.gtld-servers.net.
-    com.                    58927   IN      NS      b.gtld-servers.net.
-    com.                    58927   IN      NS      h.gtld-servers.net.
-    com.                    58927   IN      NS      m.gtld-servers.net.
-    com.                    58927   IN      NS      e.gtld-servers.net.
-    com.                    58927   IN      NS      f.gtld-servers.net.
-    com.                    58927   IN      NS      d.gtld-servers.net.
-    com.                    58927   IN      NS      j.gtld-servers.net.
-    com.                    58927   IN      NS      l.gtld-servers.net.
-    com.                    58927   IN      NS      a.gtld-servers.net.
-    com.                    58927   IN      NS      i.gtld-servers.net.
-    com.                    58927   IN      NS      k.gtld-servers.net.
-    com.
     ```
     
     -   `google.com`
@@ -206,20 +191,6 @@ Durée approximative des boucles en millisecondes :
     ;; ANSWER SECTION:
     google.com.             28      IN      A       216.58.204.110
 
-    ;; AUTHORITY SECTION:
-    com.                    58854   IN      NS      j.gtld-servers.net.
-    com.                    58854   IN      NS      m.gtld-servers.net.
-    com.                    58854   IN      NS      d.gtld-servers.net.
-    com.                    58854   IN      NS      b.gtld-servers.net.
-    com.                    58854   IN      NS      e.gtld-servers.net.
-    com.                    58854   IN      NS      a.gtld-servers.net.
-    com.                    58854   IN      NS      g.gtld-servers.net.
-    com.                    58854   IN      NS      c.gtld-servers.net.
-    com.                    58854   IN      NS      f.gtld-servers.net.
-    com.                    58854   IN      NS      l.gtld-servers.net.
-    com.                    58854   IN      NS      h.gtld-servers.net.
-    com.                    58854   IN      NS      k.gtld-servers.net.
-    com.                    58854   IN      NS      i.gtld-servers.net.
     ```
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTcwOTIyMjY1MiwtMTExMTYwMDg4Nyw4OD
