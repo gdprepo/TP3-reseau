@@ -138,7 +138,15 @@ Durée approximative des boucles en millisecondes :
     ```
     
     -   de la VM
+    
+    ```
+    [gabin@localhost ~]$ ip route
+    default via 10.0.2.2 dev enp0s3 proto dhcp metric 100
+    10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100
+    192.168.127.0/24 dev enp0s8 proto kernel scope link src 192.168.127.10 metric 101    
+    ```
     -   mettre en évidence la ligne qui leur permet de discuter (dans chacune des tables)
+   **192.168.127.0/24 dev enp0s8 proto kernel scope link src 192.168.127.10 metric 101**
 -   depuis la VM utilisez  `curl`  (ou  `wget`) pour télécharger un fichier sur internet
 -   depuis la VM utilisez  `dig`  pour connaître l'IP de :
     -   `ynov.com`
