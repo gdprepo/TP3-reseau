@@ -233,6 +233,58 @@ State       Recv-Q Send-Q Local Address:Port                Peer Address:Port
 ESTAB       0      36     192.168.127.10:22                  192.168.127.1:1119                users:(("sshd",pid=4015,fd=3))
 ```
 
+## Firewall
+ **A. SSH**  :
+* Changement du numéro du port sur lequel le serveur SSH écoute:
+```
+
+```
+* Redémarrage du serveur SSH pour que le changement prenne effet:
+```
+
+```
+* Le serveur SSH écoute sur un port différent de  `22` :
+```
+
+```
+* connectez-vous au serveur en utilisant ce port
+```
+
+```
+ * pourquoi ça a échoué ?
+ 
+ * Solution:
+ ```
+
+```
+**B.  `netcat`**
+ **Dans un premier terminal**
+ * Lancement du serveur  `netcat`:
+ ```
+
+```
+* Ecoute du port  `5454`  en TCP:
+ ```
+
+```
+* Autorisation de ce port dans le firewall:
+ ```
+
+```
+
+**Dans un deuxième terminal**
+* Connexion au serveur  `netcat`:
+ ```
+
+```
+
+**Dans un troisième terminal**
+* Visualisation de la connexion  `netcat`  en cours:
+ ```
+
+```
+
+
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTcwOTIyMjY1MiwtMTExMTYwMDg4Nyw4OD
 YzMzQ3ODcsLTIwODg3NDY2MTIsNzMwOTk4MTE2XX0=
