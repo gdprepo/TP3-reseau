@@ -291,7 +291,7 @@ Last login: Tue Jan 15 16:55:58 2019 from 192.168.127.1
  * Ecoute du port  `5454`  en TCP:
  ```
 [root@localhost ~]# nc -l 5454
-
+ ```
 * Autorisation de ce port dans le firewall:
  ```
 [root@localhost ~]# firewall-cmd --add-port=5454/tcp --permanent
