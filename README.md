@@ -148,9 +148,79 @@ Durée approximative des boucles en millisecondes :
     -   mettre en évidence la ligne qui leur permet de discuter (dans chacune des tables)
    **192.168.127.0/24 dev enp0s8 proto kernel scope link src 192.168.127.10 metric 101**
 -   depuis la VM utilisez  `curl`  (ou  `wget`) pour télécharger un fichier sur internet
+```
+[gabin@localhost ~]$ curl -o google.com www.google.com
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 11342    0 11342    0     0   126k      0 --:--:-- --:--:-- --:--:--  127k
+```
 -   depuis la VM utilisez  `dig`  pour connaître l'IP de :
     -   `ynov.com`
+    ```
+    [gabin@localhost ~]$ dig ynov.com
+
+    ; <<>> DiG 9.9.4-RedHat-9.9.4-72.el7 <<>> ynov.com
+    ;; global options: +cmd
+    ;; Got answer:
+    ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 32995
+    ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 13, ADDITIONAL: 27
+
+    ;; OPT PSEUDOSECTION:
+    ; EDNS: version: 0, flags:; udp: 4096
+    ;; QUESTION SECTION:
+    ;ynov.com.                      IN      A
+
+    ;; ANSWER SECTION:
+    ynov.com.               9527    IN      A       217.70.184.38
+
+    ;; AUTHORITY SECTION:
+    com.                    58927   IN      NS      g.gtld-servers.net.
+    com.                    58927   IN      NS      b.gtld-servers.net.
+    com.                    58927   IN      NS      h.gtld-servers.net.
+    com.                    58927   IN      NS      m.gtld-servers.net.
+    com.                    58927   IN      NS      e.gtld-servers.net.
+    com.                    58927   IN      NS      f.gtld-servers.net.
+    com.                    58927   IN      NS      d.gtld-servers.net.
+    com.                    58927   IN      NS      j.gtld-servers.net.
+    com.                    58927   IN      NS      l.gtld-servers.net.
+    com.                    58927   IN      NS      a.gtld-servers.net.
+    com.                    58927   IN      NS      i.gtld-servers.net.
+    com.                    58927   IN      NS      k.gtld-servers.net.
+    com.
+    ```
+    
     -   `google.com`
+    ```
+    [gabin@localhost ~]$ dig google.com
+    ; <<>> DiG 9.9.4-RedHat-9.9.4-72.el7 <<>> google.com
+    ;; global options: +cmd
+    ;; Got answer:
+    ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 38862
+    ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 13, ADDITIONAL: 27
+
+    ;; OPT PSEUDOSECTION:
+    ; EDNS: version: 0, flags:; udp: 4096
+    ;; QUESTION SECTION:
+    ;google.com.                    IN      A
+
+    ;; ANSWER SECTION:
+    google.com.             28      IN      A       216.58.204.110
+
+    ;; AUTHORITY SECTION:
+    com.                    58854   IN      NS      j.gtld-servers.net.
+    com.                    58854   IN      NS      m.gtld-servers.net.
+    com.                    58854   IN      NS      d.gtld-servers.net.
+    com.                    58854   IN      NS      b.gtld-servers.net.
+    com.                    58854   IN      NS      e.gtld-servers.net.
+    com.                    58854   IN      NS      a.gtld-servers.net.
+    com.                    58854   IN      NS      g.gtld-servers.net.
+    com.                    58854   IN      NS      c.gtld-servers.net.
+    com.                    58854   IN      NS      f.gtld-servers.net.
+    com.                    58854   IN      NS      l.gtld-servers.net.
+    com.                    58854   IN      NS      h.gtld-servers.net.
+    com.                    58854   IN      NS      k.gtld-servers.net.
+    com.                    58854   IN      NS      i.gtld-servers.net.
+    ```
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTcwOTIyMjY1MiwtMTExMTYwMDg4Nyw4OD
 YzMzQ3ODcsLTIwODg3NDY2MTIsNzMwOTk4MTE2XX0=
