@@ -237,25 +237,53 @@ ESTAB       0      36     192.168.127.10:22                  192.168.127.1:1119 
  **A. SSH**  :
 * Changement du numéro du port sur lequel le serveur SSH écoute:
 ```
+[root@localhost ~]# firewall-cmd --add-port=1025/tcp --permanent
+Warning: ALREADY_ENABLED: 1025:tcp
+success
+```
+```
+[root@localhost ~]# firewall-cmd --list-all
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: enp0s3 enp0s8
+  sources:
+  services: ssh dhcpv6-client
+  ports: 1025/tcp
+  protocols:
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
 
 ```
+
 * Redémarrage du serveur SSH pour que le changement prenne effet:
 ```
-
+[root@localhost ~]# firewall-cmd --reload
+success
 ```
 * Le serveur SSH écoute sur un port différent de  `22` :
 ```
-
+[root@localhost ~]# ss -lnt
+State       Recv-Q Send-Q Local Address:Port                Peer Address:Port
+LISTEN      0      100        127.0.0.1:25                             *:*
+LISTEN      0      128                *:1025                           *:*
+LISTEN      0      100              ::1:25                            :::*
+LISTEN      0      128               :::1025                          :::*
 ```
 * connectez-vous au serveur en utilisant ce port
 ```
-
+PS C:\Users\Gabin> ssh root@192.168.127.10 -p 1025
+root@192.168.127.10's password:
+Last login: Tue Jan 15 16:55:58 2019 from 192.168.127.1
 ```
  * pourquoi ça a échoué ?
- 
+ Parce que le port n'a pas était autorisé par le firewall
  * Solution:
  ```
-
+[root@localhost ~]# firewall-cmd --add-port=1025/tcp --permanent
 ```
 **B.  `netcat`**
  **Dans un premier terminal**
