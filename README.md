@@ -192,6 +192,47 @@ Durée approximative des boucles en millisecondes :
     google.com.             28      IN      A       216.58.204.110
 
     ```
+    
+# II. Notion de ports et de SSH
+## Exploration des ports locaux
+
+- SS
+TCP : 
+```
+[gabin@localhost ~]$ ss -t
+State       Recv-Q Send-Q Local Address:Port                 Peer Address:Port               
+ESTAB       0      36     192.168.127.10:blackjack            192.168.127.1:clvm-cfg         
+```
+Listening :
+```
+[gabin@localhost ~]$ ss -lt
+State       Recv-Q Send-Q Local Address:Port                 Peer Address:Port               
+LISTEN      0      100      127.0.0.1:smtp                           *:*
+LISTEN      0      128              *:blackjack                      *:*
+LISTEN      0      100            ::1:smtp                          :::*
+LISTEN      0      128             :::blackjack                     :::*
+```
+
+ss -n : 
+```
+[gabin@localhost ~]$ ss -tn
+State       Recv-Q Send-Q Local Address:Port                Peer Address:Port
+ESTAB       0      36     192.168.127.10:22               192.168.127.1:1476
+```
+
+ss -p :
+```
+[root@localhost ~]# ss -pt
+State       Recv-Q Send-Q Local Address:Port                 Peer Address:Port               
+ESTAB       0      0      192.168.127.10:blackjack            192.168.127.1:bnetgame              users:(("sshd",pid=4015,fd=3))
+```
+Port 22 :
+```
+[root@localhost ~]# ss -ptn
+State       Recv-Q Send-Q Local Address:Port                Peer Address:Port
+ESTAB       0      36     192.168.127.10:22                  192.168.127.1:1119                users:(("sshd",pid=4015,fd=3))
+```
+
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTcwOTIyMjY1MiwtMTExMTYwMDg4Nyw4OD
 YzMzQ3ODcsLTIwODg3NDY2MTIsNzMwOTk4MTE2XX0=
