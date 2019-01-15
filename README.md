@@ -288,22 +288,19 @@ Last login: Tue Jan 15 16:55:58 2019 from 192.168.127.1
 **B.  `netcat`**
  **Dans un premier terminal**
  * Lancement du serveur  `netcat`:
+ * Ecoute du port  `5454`  en TCP:
  ```
+[root@localhost ~]# nc -l 5454
 
-```
-* Ecoute du port  `5454`  en TCP:
- ```
-
-```
 * Autorisation de ce port dans le firewall:
  ```
-
+[root@localhost ~]# firewall-cmd --add-port=5454/tcp --permanent
 ```
 
 **Dans un deuxième terminal**
 * Connexion au serveur  `netcat`:
  ```
-
+C:\Users\Gabin\Documents\netcat-1.11>nc64.exe 192.168.127.10 5454
 ```
 
 **Dans un troisième terminal**
